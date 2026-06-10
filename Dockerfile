@@ -4,13 +4,13 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 
-# Descargar Lavalink
 RUN wget -O Lavalink.jar https://github.com/lavalink-devs/Lavalink/releases/download/4.0.7/Lavalink.jar
 
-# Descargar el plugin lavasrc durante el build
 RUN mkdir -p plugins && \
     wget -O plugins/lavasrc-plugin-4.2.0.jar \
-    https://github.com/topi314/LavaSrc/releases/download/4.2.0/lavasrc-plugin-4.2.0.jar
+    https://github.com/topi314/LavaSrc/releases/download/4.2.0/lavasrc-plugin-4.2.0.jar && \
+    wget -O plugins/youtube-plugin-1.11.3.jar \
+    https://github.com/lavalink-devs/youtube-source/releases/download/1.11.3/youtube-plugin-1.11.3.jar
 
 COPY application.yml .
 
