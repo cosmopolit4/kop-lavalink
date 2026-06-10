@@ -6,6 +6,7 @@ lavalink:
   plugins:
     - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.2.0"
       repository: "https://maven.topi314.dev/releases"
+      snapshot: false
   server:
     password: "kopmusicbot"
     sources:
