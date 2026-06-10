@@ -13,7 +13,7 @@ lavalink:
   server:
     password: "kopmusicbot"
     sources:
-      youtube: false      # Desactivar el source viejo de YouTube
+      youtube: false
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -35,10 +35,9 @@ plugins:
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     clients:
+      - ANDROID_LITE
       - MUSIC
-      - ANDROID_TESTSUITE
-      - WEB
-      - TVHTML5EMBEDDED
+      - WEB_REMIX
   lavasrc:
     providers:
       - "ytsearch:\"%ISRC%\""
