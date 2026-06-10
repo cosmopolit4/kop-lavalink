@@ -7,10 +7,13 @@ lavalink:
     - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.2.0"
       repository: "https://maven.topi314.dev/releases"
       snapshot: false
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.3"
+      repository: "https://maven.lavalink.dev/releases"
+      snapshot: false
   server:
     password: "kopmusicbot"
     sources:
-      youtube: true
+      youtube: false      # Desactivar el source viejo de YouTube
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -26,6 +29,16 @@ lavalink:
     gc-warnings: true
 
 plugins:
+  youtube:
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+    clients:
+      - MUSIC
+      - ANDROID_TESTSUITE
+      - WEB
+      - TVHTML5EMBEDDED
   lavasrc:
     providers:
       - "ytsearch:\"%ISRC%\""
