@@ -1,14 +1,13 @@
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
-# Instalar wget
-RUN apk add --no-cache wget
+RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 
 # Descargar Lavalink
 RUN wget -O Lavalink.jar https://github.com/lavalink-devs/Lavalink/releases/download/4.0.7/Lavalink.jar
 
-# Descargar el plugin lavasrc durante el build (no en runtime)
+# Descargar el plugin lavasrc durante el build
 RUN mkdir -p plugins && \
     wget -O plugins/lavasrc-plugin-4.2.0.jar \
     https://github.com/topi314/LavaSrc/releases/download/4.2.0/lavasrc-plugin-4.2.0.jar
