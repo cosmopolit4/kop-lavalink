@@ -37,13 +37,12 @@ plugins:
     clients:
       - MUSIC
       - WEB
+      - WEBEMBEDDED
       - TVHTML5_SIMPLY
     oauth:
       enabled: true
       refreshToken: ${YOUTUBE_REFRESH_TOKEN}
-      clients:
-        - WEB
-        - MUSIC
+      skipInitialization: true
   lavasrc:
     providers:
       - "ytsearch:\"%ISRC%\""
