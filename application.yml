@@ -36,12 +36,11 @@ plugins:
     allowDirectPlaylistIds: true
     clients:
       - MUSIC
-      - WEB_REMIX
+      - WEB
       - TVHTML5_SIMPLY
     oauth:
       enabled: true
-      # Cuando arranque Lavalink por primera vez te dará un código en los logs
-      # Ve a https://www.google.com/device y escribe el código para autorizar
+      refreshToken: ${YOUTUBE_REFRESH_TOKEN}
   lavasrc:
     providers:
       - "ytsearch:\"%ISRC%\""
