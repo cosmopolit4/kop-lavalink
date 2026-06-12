@@ -42,6 +42,8 @@ plugins:
     oauth:
       enabled: true
       refreshToken: ${YOUTUBE_REFRESH_TOKEN}
+    remoteCipher:
+      url: "https://yt-cipher.up.railway.app"
   lavasrc:
     providers:
       - "ytsearch:\"%ISRC%\""
