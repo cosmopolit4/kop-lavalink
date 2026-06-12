@@ -40,6 +40,7 @@ plugins:
       - TVHTML5_SIMPLY
     oauth:
       enabled: true
+      refreshToken: ${YOUTUBE_REFRESH_TOKEN}
   lavasrc:
     providers:
       - "ytsearch:\"%ISRC%\""
