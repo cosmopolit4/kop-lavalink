@@ -41,6 +41,9 @@ plugins:
     oauth:
       enabled: true
       refreshToken: ${YOUTUBE_REFRESH_TOKEN}
+      clients:
+        - WEB
+        - MUSIC
   lavasrc:
     providers:
       - "ytsearch:\"%ISRC%\""
